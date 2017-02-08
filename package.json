@@ -1,0 +1,24 @@
+{
+  "name": "curso_automacao_grunt",
+  "version": "1.0.0",
+  "description": "curso_automacao_grunt",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johnnyjns/curso_automacao_grunt.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/johnnyjns/curso_automacao_grunt/issues"
+  },
+  "homepage": "https://github.com/johnnyjns/curso_automacao_grunt#readme",
+  "devDependencies": {
+    "grunt-cli": "^1.2.0",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-copy": "^1.0.0"
+  }
+}
