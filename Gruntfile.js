@@ -117,10 +117,28 @@ module.exports = function(grunt){
                 src: ['public/js/**/*.js']
 
             }
+        },
+
+        browserSync: {
+
+            public: {
+
+                bsFiles: {
+                    watchTask: true,
+                    src: ['public/**/*']
+                },
+
+                options: {
+                    server: {
+                        baseDir: ['public']
+                    }
+                }
+            }
         }
 
     });
 
+    grunt.registerTask('server', ['browserSync', 'watch']);
     grunt.registerTask('minifica', ['useminPrepare', 'concat', 'uglify', 'cssmin', 'rev', 'usemin', 'imagemin']);
     grunt.registerTask('dist', ['clean','copy']);
     grunt.registerTask('default', ['dist', 'minifica']);
@@ -138,4 +156,5 @@ module.exports = function(grunt){
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-jshint');
+    grunt.loadNpmTasks('grunt-browser-sync');
 }
